@@ -343,3 +343,10 @@ a{
     color: #c44e59;
 
 }
+
+.social{
+    margin: 0 auto;
+    max-width: 65px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}

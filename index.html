@@ -3,6 +3,12 @@
 <head>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css"/>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+
+    <script type="text/javascript">
+        VK.init({apiId: 4180093, onlyWidgets: true});
+    </script>
+
 </head>
 <body>
 <div class="main">
@@ -24,6 +30,12 @@
         <label class="item5 pic" for="5"><span></span></label>
         <input id="6" name="group" class="close-input" type="radio"/>
         <label class="close" for="6">CLOSE</label>
+    </div>
+    <div class="social">
+        <div id="vk_like"></div>
+        <script type="text/javascript">
+            VK.Widgets.Like("vk_like", {type: "mini"});
+        </script>
     </div>
     <div class="info">Illustrations by <a href="http://dribbble.com/isaac317/">Isaac Montemayor</a></div>
 </div>
