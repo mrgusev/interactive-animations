@@ -1,219 +1,337 @@
+
+/*common*/
 *{
     margin: 0;
     padding: 0;
 }
 body{
-    background: sandybrown;
+    /*background: #f2c45b;*/
+    /*background: #ff9d5c;*/
+    background: #f4c59a;
+
     font-family: 'Open Sans', sans-serif;
 }
 .main{
     width: 1200px;
     margin: 0 auto;
 }
-input[type="radio"]{
+input[type="radio"], input[type="checkbox"]{
     display: none;
 }
 
-.items label.pic{
+/*items hidden*/
+.items {
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 1120px;
+    height: 300px;
+    position: relative;
+    z-index: 100;
+}
+.items .pic{
     cursor: pointer;
     display: block;
     width: 200px;
     height: 200px;
-    /*background: url('http://payload.cargocollective.com/1/1/40748/2050265/monster15.jpg');*/
-    /*border: 2px solid cadetblue;*/
-    background-size: 150%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    float: left;
     margin-right: 30px;
-    -webkit-transition: all 0.3s ease;
+    float: left;
     opacity: 0;
     border-radius: 100px;
-    vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
-.items label span{
+.items .pic span{
     margin-left: 10px;
     margin-top: 10px;
     width: 180px;
     height: 180px;
     display: block;
-    background: white;
     border-radius: 100px;
-    /*//opacity: 0.9;*/
-    -webkit-transform:scale(0);
-    background-image: url('http://payload.cargocollective.com/1/1/40748/2050265/monster15.jpg');
     background-position: 50% 50%;
     background-size: 150%;
-
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
 }
-.items {
-    position: relative;
-    z-index: 100;
-    width: 1120px;
-    margin: 0 auto;
-    -webkit-backface-visibility: hidden;
-    margin-top: 150px;
-    width: 1120px;
-    height: 300px;
-    /*background-color: beige;*/
-    /*-webkit-perspective: 1300px;*/
-}
-.items label.pic.item1{
+.items .item1{
     background-image: url('http://payload.cargocollective.com/1/1/40748/2050265/monster15.jpg');
     background: #566371;
     -webkit-transform: translateY(-150%) translateX(300px);
+    -moz-transform: translateY(-150%) translateX(300px);
+    -ms-transform: translateY(-150%) translateX(300px);
+    -o-transform: translateY(-150%) translateX(300px);
+    transform: translateY(-150%) translateX(300px);
     -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
 }
-.items label.pic.item2{
-    background-image: url('http://payload.cargocollective.com/1/1/40748/2050265/monster06.jpg');
+.items .item2{
     background: #4fcdc4;
     -webkit-transform: translateY(-150%) translateX(150px);
+    -moz-transform: translateY(-150%) translateX(150px);
+    -ms-transform: translateY(-150%) translateX(150px);
+    -o-transform: translateY(-150%) translateX(150px);
+    transform: translateY(-150%) translateX(150px);
     -webkit-transition-delay: 0.05s;
+    -moz-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
 }
-.items label.pic.item3{
-    background-image:  url('http://payload.cargocollective.com/1/1/40748/2050265/monster03.jpg');
+.items .item3{
     background: #c7f465;
     -webkit-transform: translateY(-150%) translateX(0px);
+    -moz-transform: translateY(-150%) translateX(0px);
+    -ms-transform: translateY(-150%) translateX(0px);
+    -o-transform: translateY(-150%) translateX(0px);
+    transform: translateY(-150%) translateX(0px);
     -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
 }
-.items label.pic.item4{
-    background-image:  url('http://payload.cargocollective.com/1/1/40748/2050265/monster02.jpg');
+.items .item4{
     background: #ff6c6c;
     -webkit-transform: translateY(-150%) translateX(-150px);
+    -moz-transform: translateY(-150%) translateX(-150px);
+    -ms-transform: translateY(-150%) translateX(-150px);
+    -o-transform: translateY(-150%) translateX(-150px);
+    transform: translateY(-150%) translateX(-150px);
     -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    transition-delay: 0.15s;
 }
-.items label.pic.item5{
-    background-image: url('http://payload.cargocollective.com/1/1/40748/2050265/monster05.jpg');
+.items .item5{
     background: #c44e59;
     margin-right: 0;
     -webkit-transform: translateY(-150%) translateX(-300px);
+    -moz-transform: translateY(-150%) translateX(-300px);
+    -ms-transform: translateY(-150%) translateX(-300px);
+    -o-transform: translateY(-150%) translateX(-300px);
+    transform: translateY(-150%) translateX(-300px);
     -webkit-transition-delay: 0.2s;
-}
-input[type="checkbox"]:checked ~ .items{
-    -webkit-transition: all 0.3s ease;
-}
-input[type="checkbox"]:checked ~ .items label.pic{
-    opacity: 1;
-    -webkit-transition: all 500ms cubic-bezier(0.065, 0.730, 0.065, 1.255);
-    -webkit-transform: translateY(0) translateX(0);
-}
-input[type="checkbox"]:checked ~ .items label.pic.item1{
-    -webkit-transition-delay: 0s;
-}
-input[type="checkbox"]:checked ~ .items label.pic.item2{
-    -webkit-transition-delay: 0.05s;
-}
-input[type="checkbox"]:checked ~ .items label.pic.item3{
-    -webkit-transition-delay: 0.1s;
-}
-input[type="checkbox"]:checked ~ .items label.pic.item4{
-    -webkit-transition-delay: 0.15s;
-}
-input[type="checkbox"]:checked ~ .items label.pic.item5{
-    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
 
-input[type="checkbox"]:checked ~ .items input:checked + label.pic{
+/*items shown*/
+input[type="checkbox"]:checked ~ .items .pic{
+    opacity: 1;
+    -webkit-transition: all 500ms cubic-bezier(0.065, 0.730, 0.065, 1.255);
+    -moz-transition: all 500ms cubic-bezier(0.065, 0.730, 0.065, 1.255);
+    -o-transition: all 500ms cubic-bezier(0.065, 0.730, 0.065, 1.255);
+    transition: all 500ms cubic-bezier(0.065, 0.730, 0.065, 1.255);
+    -webkit-transform: translateY(0) translateX(0);
+    -moz-transform: translateY(0) translateX(0);
+    -ms-transform: translateY(0) translateX(0);
+    -o-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+}
+input[type="checkbox"]:checked ~ .items .pic.item1{
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+input[type="checkbox"]:checked ~ .items .pic.item2{
+    -webkit-transition-delay: 0.05s;
+    -moz-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+input[type="checkbox"]:checked ~ .items .pic.item3{
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+input[type="checkbox"]:checked ~ .items .pic.item4{
+    -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+
+}
+input[type="checkbox"]:checked ~ .items .pic.item5{
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+/*items backgrounds*/
+.items .item1 span{
+    background-image: url('http://payload.cargocollective.com/1/1/40748/2050265/monster15.jpg');
+}
+.items .item2 span{
+    background-image:  url('http://payload.cargocollective.com/1/1/40748/2050265/monster02.jpg');
+}
+.items .item3 span{
+    background-image:  url('http://payload.cargocollective.com/1/1/40748/2050265/monster03.jpg');
+}
+.items .item4 span{
+    background-image: url('http://payload.cargocollective.com/1/1/40748/2050265/monster06.jpg');
+}
+.items .item5 span{
+    background-image: url('http://payload.cargocollective.com/1/1/40748/2050265/monster05.jpg');
+}
+
+/*items checked*/
+input[type="checkbox"]:checked ~ .items input:checked + .pic{
     -webkit-transition: -webkit-transform 0.3s ease-in;
-    /*display: none;*/
-    /*background-size: 300px;*/
-    /*border-radius: 0;*/
-    /*border: 0px;*/
-    /*padding-left: 2px;*/
-    /*padding-right: 2px;*/
-    /*opacity: 0.5;*/
+    -moz-transition: -moz-transform 0.3s ease-in;
+    -o-transition: -o-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
     position: relative;
     z-index: 1000;
 }
-input[type="checkbox"]:checked ~ .items input:checked + label span{
-    -webkit-transition: -webkit-transform 0.3s ease;
-    -webkit-transition-delay: 0.2s;
-    -webkit-transform:scale(1)
+input[type="checkbox"]:checked ~ .items input:checked + .pic span{
+    -webkit-transition: -webkit-transform 0.3s ease 0.2s;
+    -moz-transition: -moz-transform 0.3s ease 0.2s;
+    -o-transition: -o-transform 0.3s ease 0.2s;
+    transition: transform 0.3s ease 0.2s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
 }
 input[type="checkbox"]:checked ~ .items input:checked + .item1{
-    -webkit-transform:scaleX(2) scaleY(2) translateX(230px) rotateY(180deg);
+    -webkit-transform:scale(2) translateX(230px) rotateY(180deg);
+    -moz-transform: scale(2) translateX(230px) rotateY(180deg);
+    -ms-transform: scale(2) translateX(230px) rotateY(180deg);
+    -o-transform: scale(2) translateX(230px) rotateY(180deg);
+    transform: scale(2) translateX(230px) rotateY(180deg);
 }
 input[type="checkbox"]:checked ~ .items input:checked + .item2{
-    -webkit-transform:scaleX(2) scaleY(2) translateX(115px) rotateY(180deg);
+    -webkit-transform:scale(2) translateX(115px) rotateY(180deg);
+    -moz-transform: scale(2) translateX(115px) rotateY(180deg);
+    -ms-transform: scale(2) translateX(115px) rotateY(180deg);
+    -o-transform: scale(2) translateX(115px) rotateY(180deg);
+    transform: scale(2) translateX(115px) rotateY(180deg);
 }
 input[type="checkbox"]:checked ~ .items input:checked + .item3{
-    -webkit-transform:scaleX(2) scaleY(2) translateX(0px) rotateY(180deg);
+    -webkit-transform:scale(2) translateX(0px) rotateY(180deg);
+    -moz-transform: scale(2) translateX(0px) rotateY(180deg);
+    -ms-transform: scale(2) translateX(0px) rotateY(180deg);
+    -o-transform: scale(2) translateX(0px) rotateY(180deg);
+    transform: scale(2) translateX(0px) rotateY(180deg);
 }
 input[type="checkbox"]:checked ~ .items input:checked + .item4{
-    -webkit-transform:scaleX(2) scaleY(2) translateX(-115px) rotateY(180deg);
+    -webkit-transform:scale(2) translateX(-115px) rotateY(180deg);
+    -moz-transform: scale(2) translateX(-115px) rotateY(180deg);
+    -ms-transform: scale(2) translateX(-115px) rotateY(180deg);
+    -o-transform: scale(2) translateX(-115px) rotateY(180deg);
+    transform: scale(2) translateX(-115px) rotateY(180deg);
 }
 input[type="checkbox"]:checked ~ .items input:checked + .item5{
-    -webkit-transform:scaleX(2) scaleY(2) translateX(-230px) rotateY(180deg);
+    -webkit-transform:scale(2) translateX(-230px) rotateY(180deg);
+    -moz-transform: scale(2) translateX(-230px) rotateY(180deg);
+    -ms-transform: scale(2) translateX(-230px) rotateY(180deg);
+    -o-transform: scale(2) translateX(-230px) rotateY(180deg);
+    transform: scale(2) translateX(-230px) rotateY(180deg);
 }
+
+/*close button*/
 .close{
-    -webkit-transform: scale(0);
-    background: white;
-    line-height: 70px;
-    text-align: center;
-    border-radius: 35px;
     width: 70px;
     height: 70px;
     position: absolute;
     top: -100px;
     right: 340px;
-    -webkit-transition-delay: 0s;
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(.9,-0.25,.87,.26);
-}
-input[type="checkbox"]:checked ~ .items input:not(.close-input):checked ~ label.close{
-    -webkit-transition: -webkit-transform 0.3s ease;
-    -webkit-transition-delay: 0.4s;
-    -webkit-transform:scale(1) translateX(0px) translateY(0px);
-}
-input[type="checkbox"]:checked ~ .items input.close-input:checked{
-    -webkit-transform: scale(0);
-    -webkit-transition-delay: 0s;
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(.9,-0.25,.87,.26);
-}
-/*check box*/
-input[type="checkbox"]{
-    display: none;
-}
-input[type="checkbox"] + label{
-    -webkit-perspective: 400px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 35px;
+    background: white;
     cursor: pointer;
-    font-size: 32px;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(.9,-0.25,.87,.26);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(.9,-0.25,.87,.26);
+    -o-transition: -o-transform 0.3s cubic-bezier(.9,-0.25,.87,.26);
+    transition: transform 0.3s cubic-bezier(.9,-0.25,.87,.26);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+input[type="checkbox"]:checked ~ .items input:not(.close-input):checked ~ .close{
+    -webkit-transition: -webkit-transform 0.3s ease 0.4s;
+    -moz-transition: -moz-transform 0.3s ease 0.4s;
+    -o-transition: -o-transform 0.3s ease 0.4s;
+    transition: transform 0.3s ease 0.4s;
+    -webkit-transform: scale(1) ;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
 
-    font-weight: 300;
-    color: white;
+/*check box*/
+input[type="checkbox"] + label{
     height: 50px;
-    line-height: 50px;
+    width: 240px;
     margin: 32px auto 0;
     display: block;
-    width: 240px;
-    text-align: center;
     position: relative;
     z-index: 10000;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 50px;
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
 }
 input[type="checkbox"] + label span{
     border-radius: 0px;
-    background: forestgreen;
+    background: #3c8284;
     display: block;
     -webkit-backface-visibility: hidden;
-}
-input[type="checkbox"] + label .flip-true{
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transition: -webkit-transform 0.3s ease;
+    -moz-transition: -moz-transform 0.3s ease;
+    -o-transition: -o-transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+input[type="checkbox"] + label .flip-hide{
     -webkit-transform: rotateX(180deg);
-
-
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
-input[type="checkbox"] + label .flip-false{
-    -webkit-transition: -webkit-transform 0.3s ease;
+input[type="checkbox"] + label .flip-show{
     -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
     margin-top: -50px;
 }
-
-input[type="checkbox"]:checked + label .flip-true{
+input[type="checkbox"]:checked + label .flip-hide{
     -webkit-transform: rotateX(0deg);
-
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
-input[type="checkbox"]:checked + label .flip-false{
+input[type="checkbox"]:checked + label .flip-show{
     -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
 }
+
+/*footer*/
 .info{
     text-align: center;
     color: #566371;
